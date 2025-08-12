@@ -1,30 +1,72 @@
-# Hospital-Management
+🏥 Hospital Management System
+A Spring Boot application that provides CRUD (Create, Read, Update, Delete) operations for managing hospital resources such as patients, doctors, appointments, and departments.
 
-Hospital Management System(HMS) is a system for managing the hospital functions and events. It has different modules such as adding new doctors, managing parents and managing appointments. It is a web-based powerful hospital management containing user and admin panel.
+🚀 Features
+Patient Management – Add, update, view, and delete patient records.
 
-#Technologies Used
+Doctor Management – Maintain doctor details and specialties.
 
--->SpringBoot
--->JDK 11
--->Embedded Apache Tomcat 
--->SpringTool Suite Editor
+Appointment Management – Book, update, cancel, and view appointments.
 
-#Front end
+Department Management – Organize hospital departments and assign doctors.
 
--->Angular 6
--->Bootstrap for responsive webpages
--->Vs code editor
+RESTful API – Easy-to-use endpoints for all entities.
 
-#Databases
+Database Integration – Uses Spring Data JPA with Hibernate for ORM.
 
--->Hibernate+Jpa
+🛠 Tech Stack
+Layer	Technology
+Backend	Java 17, Spring Boot 3.x
+ORM	Hibernate, JPA
+Database	MySQL / PostgreSQL
+Build Tool	Maven
+API Testing	Postman / Swagger
+IDE	IntelliJ IDEA / Eclipse
 
+📂 Project Structure
+bash
+Copy
+Edit
+hospital-management/
+│── src/main/java/com/example/hospital
+│   ├── controller       # REST Controllers
+│   ├── entity           # JPA Entities
+│   ├── repository       # Spring Data JPA Repositories
+│   ├── service          # Business Logic
+│   ├── dto              # Data Transfer Objects
+│   └── HospitalManagementApplication.java
+│
+│── src/main/resources
+│   ├── application.properties
+│   └── data.sql         # Initial sample data (optional)
+│
+└── pom.xml
 
+📌 API Endpoints
+👩‍⚕️ Doctors
+Method	Endpoint	Description
+GET	/api/doctors	Get all doctors
+GET	/api/doctors/{id}	Get doctor by ID
+POST	/api/doctors	Add a new doctor
+PUT	/api/doctors/{id}	Update doctor details
+DELETE	/api/doctors/{id}	Delete a doctor
 
+🧑‍🦽 Patients
+Method	Endpoint	Description
+GET	/api/patients	Get all patients
+GET	/api/patients/{id}	Get patient by ID
+POST	/api/patients	Add a new patient
+PUT	/api/patients/{id}	Update patient details
+DELETE	/api/patients/{id}	Delete a patient
 
-#Pre-requistes before executing
+📅 Appointments
+Method	Endpoint	Description
+GET	/api/appointments	Get all appointments
+POST	/api/appointments	Book an appointment
+PUT	/api/appointments/{id}	Update appointment
+DELETE	/api/appointments/{id}	Cancel appointment
 
--->Clone the project
--->change the database properties in "application.properties" file in springboot
--->configure the server port numbers
--->Run
+📖 Full API documentation is available in Swagger at:
+
+bash
+http://localhost:8080/swagger-ui/index.html
